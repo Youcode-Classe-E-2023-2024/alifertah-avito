@@ -1,3 +1,18 @@
+<?php
+
+    $username = "root";
+    $password = "";
+    $database = "avito_database";
+
+    $mysqli = new mysqli("localhost", $username, $password, $database);
+
+
+    $query = $mysqli->query("SELECT * FROM annonce");
+    while ($s = $query->fetch_assoc()) {
+        print_r($s["date_poste"]);
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
